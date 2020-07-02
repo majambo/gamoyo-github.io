@@ -1,0 +1,14 @@
+
+b <- ggtern(data = t3,
+               aes(transi15in, transi15ou, transi15LR)) + 
+  geom_point(color="gray10",size=2,shape=21) +
+  theme_rgbw(base_size = 15) +
+  theme(plot.margin=grid::unit(c(0,-5,0,0), "cm")) +
+  #theme(legend.justification=c(0,1), legend.position=c(0,1)) +
+  #theme_gridsontop() + 
+  guides(fill = guide_colorbar(order=1),color="none") + 
+  labs(title = "Transient",
+       x = "", xarrow = "Indegree", y = "", yarrow = "Outdegree",
+       z = "", zarrow = "Local retension", size = 14) +
+  theme(plot.title = element_text(hjust = 0.5, vjust= -8, size = 15)) + theme(legend.position = "none")
+#labs(title= "Ternary Plot and Filled Contour",fill = "Value, V")
